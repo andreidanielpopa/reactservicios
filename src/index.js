@@ -3,12 +3,15 @@ import ReactDOM from 'react-dom/client';
 import './index.css';
 
 import reportWebVitals from './reportWebVitals';
-
-import Departamentos from './components/MaestroDetalle/Departamentos';
+import Router from './components/Router';
+import MenuRutas from './components/MenuRutas';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
-    <Departamentos />
+    <div>
+        <MenuRutas/>
+        <Router/>
+    </div>
 );
 
 // If you want to start measuring performance in your app, pass a function

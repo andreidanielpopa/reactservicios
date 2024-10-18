@@ -5,6 +5,7 @@ import Global from '../../Global'
 export default class Empleados extends Component {
     state = {
         empleados: [],
+        texto: '',
     }
 
     loadEmpleados = () => {
@@ -23,6 +24,14 @@ export default class Empleados extends Component {
     componentDidMount = () => {
         this.loadEmpleados();
     }
+
+    componentDidUpdate = (oldProps) => {
+        //Solo actualiza cuando props haya cambiado
+        if (oldProps.iddepartamento != this.props.iddepartamento) {
+            this.loadEmpleados();
+        }
+    }
+
     render() {
         return (
             <div>
