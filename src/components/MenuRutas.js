@@ -1,16 +1,15 @@
 import React, { Component } from 'react'
+import { NavLink } from 'react-router-dom'
 
 export default class MenuRutas extends Component {
     render() {
         return (
             <div>
-                <ul>
-                    <li><a href='/'>Home</a></li>
-                    <li><a href='/tabla/23'>Tabla de Multiplicar</a></li>
-                    <li><a href='/tabla/6'>Tabla de Multiplicar</a></li>
-                    <li><a href='/tabla/7'>Tabla de Multiplicar</a></li>
-                    <li><a href='/noesxistenideblas'>Not Found</a></li>
-                </ul>
+                <NavLink to='/'>Home |</NavLink>
+                <NavLink to='/tabla/23'>Tabla de Multiplicar |</NavLink>
+                <NavLink to='/tabla/6'>Tabla de Multiplicar |</NavLink>
+                <NavLink to='/tabla/7'>Tabla de Multiplicar |</NavLink>
+                <NavLink to='/noesxistenideblas'>Not Found |</NavLink>
             </div>
         )
     }

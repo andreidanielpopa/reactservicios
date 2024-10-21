@@ -54,7 +54,7 @@ export default class BuscadorCoches extends Component {
                     <input type='text' ref={this.cajaMarca} />
                     <button onClick={this.buscarCoches}>Buscar coches</button>
                 </form>
-                <table border={1}>
+                <table border={1} className='table table-dark'>
                     <thead>
                         <tr>
                             <th>Coche</th>

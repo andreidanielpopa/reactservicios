@@ -19,6 +19,12 @@ export default class TablaMultiplicar extends Component {
         })
     }
 
+    componentDidUpdate = (oldProps) => {
+        if (oldProps.numero != this.props.numero) {
+            this.generarTablaMultiplicar();
+        }
+    }
+
     componentDidMount = () => {
         this.generarTablaMultiplicar();
     }
@@ -30,8 +36,8 @@ export default class TablaMultiplicar extends Component {
                 <h3>Numero: {this.props.numero}</h3>
                 <ul>
                     {
-                        this.state.tabla.map((numero,index)=>{
-                            return(
+                        this.state.tabla.map((numero, index) => {
+                            return (
                                 <li key={index}>{this.props.numero} * {index + 1} = {numero}</li>
                             )
                         })
